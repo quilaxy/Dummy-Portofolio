@@ -1,23 +1,33 @@
 section {
-    padding-top: 130px;
+    padding-top: 120px;
     padding-bottom: 50px;
-    position: relative;
 }
 
-section::before {
-    z-index: -1;
-    content: '';
-    font-size: 70px;
+.section-header {
+    font-size: 4rem;
     color: #000;
     opacity: 0.2;
-    position: absolute;
     font-weight: 700;
-    top: 25px;
+    margin-bottom: 20px;
+}
+
+.section-header:hover {
+    opacity: 0.8;
+}
+
+.section-header-hover {
+    color: #fff;
+    transition: 500ms ease-in-out;
+    font-size: 4rem;
+}
+
+.section-header:hover .section-header-hover {
+    color: #000;
 }
 
 .btn {
     border: 3px solid #000;
-    border-radius: 24px;
+    border-radius: 25px;
 }
 
 .btn:hover, .btn.active {
@@ -41,12 +51,16 @@ section::before {
     border-radius: 100%;
 }
 
+.home img {
+    width: 100%;
+}
+
 .home h1 {
-    font-size: 72px;
+    font-size: 4rem;
 }
 
 .home h3 {
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 .home .arrow img {
@@ -55,10 +69,6 @@ section::before {
 
 #arrow {
     animation: 2s upDown infinite;
-}
-
-#about::before {
-    content: 'About';
 }
 
 .about-exp-item {
@@ -73,10 +83,6 @@ section::before {
 
 .about-exp-item-detail {
     display: none;
-}
-
-.work::before {
-    content: 'Work';
 }
 
 .work-img {
@@ -136,10 +142,6 @@ section::before {
     content: 'Front End Developer';
 }
 
-.contact::before {
-    content: 'Contact';
-}
-
 .contact {
     padding-bottom: 120px;
 }
@@ -154,13 +156,13 @@ section::before {
     font-weight: 500;
 }
 
-.social-media-icon img {
-    width: 32px;
-}
-
 .button {
     padding: 8px 24px;
     font-weight: 500;
+}
+
+.contact-icon a {
+    color: #000;
 }
 
 @keyframes upDown {
@@ -172,5 +174,36 @@ section::before {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .home img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .contact a {
+        font-size: 12px;
+    }
+    .home h1 {
+        font-size: 3rem;
+    }
+    
+    .home h3 {
+        font-size: 2rem;
+    }
+    .section-header {
+        font-size: 3rem;
+    }
+    .section-header-hover {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 366px) {
+    .btn {
+        font-size: 12px;
     }
 }
