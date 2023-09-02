@@ -16,3 +16,24 @@ function toggleDetail(event) {
 
     $(detail).slideToggle()
 }
+
+function onFormSubmit(event) {
+    event.preventDefault() //biar setelah submit gak ke scroll ke atas
+    const email = $("#inp_email")
+    const subject = $("#inp_subject")
+    const message = $("#inp_message")
+
+    if (!$(email).val()) {
+        alert("Email is required")
+     }else if (!$(subject).val()) {
+        alert("Subject is required")
+    } else if (!$(message).val()) {
+        alert("Message is required")
+    } else {
+        alert("Form Submitted")
+        //untuk mengosongkan form setelah di submit
+        $(email).val("")
+        $(subject).val("")
+        $(message).val("")
+    }
+}

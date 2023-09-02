@@ -136,6 +136,33 @@ section::before {
     content: 'Front End Developer';
 }
 
+.contact::before {
+    content: 'Contact';
+}
+
+.contact {
+    padding-bottom: 120px;
+}
+
+.contact-form {
+    border: 3px solid #000;
+    border-radius: 16px;
+    padding: 64px 32px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.social-media-icon img {
+    width: 32px;
+}
+
+.button {
+    padding: 8px 24px;
+    font-weight: 500;
+}
+
 @keyframes upDown {
     0% {
         transform: translateY(0);
