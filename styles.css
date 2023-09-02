@@ -1,5 +1,17 @@
 section {
     padding-top: 128px;
+    position: relative;
+}
+
+section::before {
+    z-index: -1;
+    content: '';
+    font-size: 70px;
+    color: #000;
+    opacity: 0.2;
+    position: absolute;
+    font-weight: 700;
+    top: 10px;
 }
 
 .btn {
@@ -7,10 +19,16 @@ section {
     border-radius: 24px;
 }
 
-.btn:hover {
+.btn:hover, .btn.active {
     border: 3px solid #000;
     background-color: #000;
     color: #fff;
+}
+
+.btn.active:hover {
+    border: 3px solid #000;
+    background-color: #fff;
+    color: #000;
 }
 
 .navbar {
@@ -32,6 +50,24 @@ section {
 
 #arrow {
     animation: 2s upDown infinite;
+}
+
+#about::before {
+    content: 'About';
+}
+
+.about-exp-item {
+    margin-top: 32px;
+}
+
+.about-exp-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-exp-item-detail {
+    display: none;
 }
 
 @keyframes upDown {
