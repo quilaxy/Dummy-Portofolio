@@ -1,5 +1,5 @@
 section {
-    padding-top: 128px;
+    padding-top: 120px;
     position: relative;
 }
 
@@ -33,7 +33,11 @@ section::before {
 
 .navbar {
     background-color: #fff;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profile img {
+    border-radius: 100%;
 }
 
 .home h1 {
@@ -45,7 +49,7 @@ section::before {
 }
 
 .home .arrow img {
-    width: 60px;
+    width: 40px;
 }
 
 #arrow {
